@@ -19,8 +19,10 @@ int countWord(char str[])
         if (str[i] == ' ' || str[i] == '\n')
             check = 0;
         else if (!check)
+        {
             check = 1;
             count++;
+        }
     }
     return count;
 }
@@ -28,5 +30,5 @@ int countWord(char str[])
 int main()
 {
     char str[] = {"Hello world"};
-    printf("Chuoi '%s' co so tu la: ", str, countWord(str));
+    printf("Chuoi '%s' co so tu la: %d", str, countWord(str));
 }
